@@ -6,8 +6,15 @@ This repository is used for educational purposes. It has study references, tests
 ## Study References
 
 ### MiniLibX
-*  [rkrocha/mlx_test](https://github.com/rkrocha/mlx_test) - Use and explanation of some functions that will be useful in this project. In portuguese.
-*	[minilibx guide](https://harm-smits.github.io/42docs/libs/minilibx.html) - A tutorial on how to use the minilibx.
+ * [rkrocha/mlx_test](https://github.com/rkrocha/mlx_test) - Use and explanation of some functions that will be useful in this project. In portuguese.
+ * [minilibx guide](https://harm-smits.github.io/42docs/libs/minilibx.html) - A tutorial on how to use the minilibx.
+
+### Makefile
+* [GNU make](http://www.gnu.org/software/make/manual/html_node/index.html#toc-Overview-of-make) - The GNU manual about make.
+* [Addprefix argument](http://www.gnu.org/software/make/manual/html_node/File-Name-Functions.html#index-file-name-prefix_002c-adding);
+* [Automatic variables ($< and $@)](http://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html#Automatic-Variables);
+* [Pattern rules (about % simbol)](http://www.gnu.org/software/make/manual/html_node/Pattern-Match.html#Pattern-Match);
+
 
 
 
