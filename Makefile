@@ -6,12 +6,33 @@
 #    By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/18 10:10:33 by aalcara-          #+#    #+#              #
-#    Updated: 2021/05/18 13:53:46 by aalcara-         ###   ########.fr        #
+#    Updated: 2021/05/26 11:41:51 by aalcara-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC =	parsing.c
-
+SRC =	cub3d_init.c \
+		cub3d_parsing.c \
+		cub3d_utils.c \
+		cub3d_utils2.c \
+		cub3d.c \
+		errors.c \
+		exit.c \
+		get_next_line_utils.c \
+		get_next_line.c \
+		map_parsing.c \
+		map_utils.c \
+		move_keys.c \
+		raycasting_init.c \
+		raycasting_move.c \
+		raycasting_utils.c \
+		raycasting.c \
+		save_check.c \
+		save.c \
+		sprite_init.c \
+		sprite.c \
+		texture_draw.c \
+		texture_get.c \
+		texture_init.c
 
 NAME = Cub3D
 
@@ -41,7 +62,7 @@ $(NAME): $(OBJ)
 # $@ significa o próprio nome da regra, neste caso $(OBJ_DIR)/%.o
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 		@mkdir -p $(OBJ_DIR)
-		@$(CC) $(CFLAGS) -I $(INC_DIR) $(MLX_DIR) -c $< -o $@
+		@$(CC) $(CFLAGS) -I $(INC_DIR) -I $(MLX_DIR) -c $< -o $@
 
 # -C flag muda para MLX_DIR para rodar outro make
 # --no-print-directory

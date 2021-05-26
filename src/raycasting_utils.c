@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 21:49:26 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/25 09:02:23 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/26 10:24:22 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,16 @@ void	ft_stepsidedist(t_cub *cub)
 							* cub->ray.deltadisty;
 	}
 	ft_incrementray(cub);
+}
+
+void	ft_swap(t_cub *cub)
+{
+	void	*tmp;
+
+	tmp = cub->data.img;
+	cub->data.img = cub->data.img2;
+	cub->data.img2 = tmp;
+	tmp = cub->data.addr;
+	cub->data.addr = cub->data.addr2;
+	cub->data.addr2 = tmp;
 }

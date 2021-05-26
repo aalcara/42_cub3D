@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 18:59:51 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/25 09:08:47 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/26 10:25:36 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@ int	ft_raycasting(t_cub *cub)
 	{
 		ft_init_ray(cub);
 		ft_stepsidedist(cub);
-		ft_color_column(cub); //! ********************************************************
+		ft_color_column(cub);
 		cub->s.zbuffer[cub->ray.x] = cub->ray.perpwalldist;
 		cub->ray.x++;
 	}
-	ft_sprite(cub); //! ******************************************************************
+	ft_sprite(cub);
 	if (cub->save == 1)
-		ft_save(cub); //! ******************************************************************
+		ft_save(cub);
 	mlx_put_image_to_window(cub->data.mlx_ptr, cub->data.mlx_win, \
 			cub->data.img, 0, 0);
-	ft_forward_back(cub); //! ******************************************************************
-	ft_left_right(cub); //! ******************************************************************
-	ft_rotate_right_left(cub); //! ******************************************************************
-	ft_swap(cub); //! ******************************************************************
+	ft_forward_back(cub);
+	ft_left_right(cub);
+	ft_rotate_right_left(cub);
+	ft_swap(cub);
 	return (0);
 }
 

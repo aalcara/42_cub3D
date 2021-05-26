@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 09:56:42 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/25 08:35:37 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/26 11:43:12 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	ft_texture(char *str, t_cub *cub)
 	j++;
 }
 
-int	ft_color_resolution(char **str, t_cub *cub)
+void	ft_color_resolution(char **str, t_cub *cub)
 {
 	int	i;
 
