@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 09:56:44 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/26 11:47:22 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/26 13:22:22 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,12 +84,13 @@ void	ft_error(t_cub *cub, char *str);
 **	exit
 ******************************************************************************/
 
-int			ft_exit(t_cub *cub);
+int		ft_exit(t_cub *cub);
+
 /******************************************************************************
 **	map_parsing
 ******************************************************************************/
 
-int		ft_copy_map(char * str, t_cub *cub);
+int		ft_copy_map(char *str, t_cub *cub);
 int		ft_is_map(char *str, t_cub *cub);
 void	ft_mapsize(char *str, t_cub *cub);
 int		ft_parsing_map(char *filename, t_cub *cub);
@@ -154,7 +155,7 @@ void	ft_save(t_cub *cub);
 **	save_check
 ******************************************************************************/
 
-int			ft_check_save(char *str);
+int		ft_check_save(char *str);
 
 /******************************************************************************
 **	sprite

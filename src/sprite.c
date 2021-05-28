@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 17:18:55 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/25 19:21:54 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/26 13:06:37 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	ft_dist_order(t_cub *cub)
 	while (++i < cub->s.nbspr)
 	{
 		j = -1;
-		while(++j < cub->s.nbspr - 1)
+		while (++j < cub->s.nbspr - 1)
 		{
 			if (cub->s.dist[j] < cub->s.dist[j + 1])
 			{
@@ -62,7 +62,7 @@ void	ft_calculs(t_cub *cub, int i)
 			cub->s.spritex - cub->ray.dirx * cub->s.spritey);
 	cub->s.transformy = cub->s.invdet * (-cub->ray.plany * \
 			cub->s.spritex + cub->ray.planx * cub->s.spritey);
-	cub->s.spritescreenx = (int)((cub->rx / 2) * (1+ cub->s.transformx / \
+	cub->s.spritescreenx = (int)((cub->rx / 2) * (1 + cub->s.transformx / \
 			cub->s.transformy));
 	cub->s.spriteheight = abs((int)(cub->ry / (cub->s.transformy)));
 	cub->s.drawstarty = -cub->s.spriteheight / 2 + cub->ry / 2;
@@ -90,7 +90,7 @@ void	ft_draw_spr(t_cub *cub, int y, int texx, int stripe)
 		d = (y) * 256 - cub->ry * 128 + cub->s.spriteheight * 128;
 		texy = ((d * cub->texture[4].height) / cub->s.spriteheight) / 256;
 		if (cub->texture[4].addr[texy * cub->texture[4].line_length / 4 + \
-				texx] != - 16777216)
+				texx] != -16777216)
 		{
 			cub->data.addr[y * cub->data.line_length / 4 + stripe] = \
 				cub->texture[4].addr[texy * cub->texture[4].line_length / \

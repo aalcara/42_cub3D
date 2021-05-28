@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 23:30:56 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/25 08:26:12 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/26 13:28:50 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,9 +96,13 @@ int	get_next_line(int fd, char **line, t_cub *cub)
 	if (ret == 0)
 		return (1);
 	if (!buff)
-		if (!(buff = malloc(sizeof(char) * BUFFER_SIZE + 1)))
+	{
+		buff = malloc(sizeof(char) * BUFFER_SIZE + 1);
+		if (!buff)
 			return (-1);
-	while ((ret = read(fd, buff, BUFFER_SIZE)) > 0)
+	}
+	ret = read(fd, buff, BUFFER_SIZE);
+	while (ret > 0)
 	{
 		buff[ret] = '\0';
 		if (!ft_copy(line, &buff))

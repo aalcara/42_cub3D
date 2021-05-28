@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 19:07:15 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/25 09:15:24 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/26 13:08:34 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_init_dir(t_cub *cub)
 void	ft_init_mlx(t_cub *cub)
 {
 	cub->s.zbuffer = (double *)malloc(sizeof(double) * cub->rx);
-	if(!cub->s.zbuffer)
+	if (!cub->s.zbuffer)
 		exit(0);
 	cub->data.forward = 0;
 	cub->data.back = 0;

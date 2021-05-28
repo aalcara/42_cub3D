@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 17:14:29 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/26 11:15:58 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/26 13:09:15 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_start(char c, t_cub *cub, int i, int j)
 	return (0);
 }
 
-int ft_walls_util(char *str)
+int	ft_walls_util(char *str)
 {
 	int	i;
 

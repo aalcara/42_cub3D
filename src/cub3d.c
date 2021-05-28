@@ -6,13 +6,13 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 09:56:42 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/20 12:26:57 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/26 13:20:59 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub3d.h"
 
-int		ft_cub(char *str, t_cub *cub)
+int	ft_cub(char *str, t_cub *cub)
 {
 	int	i;
 
@@ -35,7 +35,7 @@ int		ft_cub(char *str, t_cub *cub)
 	return (0);
 }
 
-int		main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_cub		cub;
 

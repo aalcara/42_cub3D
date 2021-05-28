@@ -6,9 +6,14 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 11:10:43 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/24 17:32:47 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/26 13:26:14 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef STRUCTS_H
+# define STRUCTS_H
+
+# include "cub3d.h"
 
 typedef struct s_sprxy
 {
@@ -58,7 +63,7 @@ typedef struct s_data
 	int				*addr2;
 }	t_data;
 
-typedef struct		s_texture
+typedef struct s_texture
 {
 	int				texdir;
 	double			wallx;
@@ -66,9 +71,9 @@ typedef struct		s_texture
 	int				texy;
 	double			step;
 	double			texpos;
-}					t_texture;
+}	t_texture;
 
-typedef struct		s_ray
+typedef struct s_ray
 {
 	double			posx;
 	double			posy;
@@ -98,7 +103,7 @@ typedef struct		s_ray
 	double			rotspeed;
 	int				x;
 	int				texture;
-}					t_ray;
+}	t_ray;
 
 typedef struct s_cub
 {
@@ -139,3 +144,5 @@ typedef struct s_cub
 	t_sprite		s;
 	t_sprxy			*sxy;
 }	t_cub;
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 09:56:42 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/26 11:43:12 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/26 13:20:27 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void	ft_color_resolution(char **str, t_cub *cub)
 			cub->we == NULL || cub->ea == NULL ||cub->sp == NULL))
 		cub->error = 2;
 	if ((cub->no != NULL || cub->so != NULL || cub->we != NULL ||\
-			cub->ea != NULL || cub->sp != NULL) &&\
+			cub->ea != NULL || cub->sp != NULL) && \
 			(cub->rx == 0 || cub->ry == 0))
 		cub->error = 2;
 	if (*str[i] == 'R')
@@ -123,4 +123,3 @@ void	ft_parsing(char *filename, t_cub *cub)
 		ft_error(cub, "missing map\n");
 	ft_parsing_map(filename, cub);
 }
-

@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 10:20:50 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/20 12:25:09 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/26 13:20:37 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,4 @@ void	ft_init_geral(t_cub *cub)
 	cub->sum = 0;
 	cub->wrongcharmap = 0;
 	ft_init_geral2(cub);
-
 }

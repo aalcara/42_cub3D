@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 20:40:42 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/25 08:50:39 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/26 13:08:56 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,3 @@ int	ft_key_release(int keycode, t_cub *cub)
 		cub->data.rotate_right = 0;
 	return (1);
 }
-
