@@ -6,12 +6,14 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 09:56:42 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/26 13:20:59 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/02 15:47:28 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub3d.h"
 
+/* - Verify name of .cub file;
+- Start parsing function.*/
 int	ft_cub(char *str, t_cub *cub)
 {
 	int	i;
@@ -35,6 +37,10 @@ int	ft_cub(char *str, t_cub *cub)
 	return (0);
 }
 
+/* - Declare cub variable;
+- Initialize several variables in init_geral function;
+- Check if have correct arguments.
+- Than start check_save and cub functions */
 int	main(int argc, char **argv)
 {
 	t_cub		cub;

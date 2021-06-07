@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 10:20:50 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/26 13:20:37 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/02 16:58:10 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	ft_init_geral2(t_cub *cub)
 	cub->sxy = NULL;
 }
 
+/* - initialize variables to use in cub3d functions */
 void	ft_init_geral(t_cub *cub)
 {
 	cub->no = NULL;

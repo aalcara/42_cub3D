@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 11:06:16 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/25 09:03:56 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/02 19:34:00 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	ft_strlen2(char *str)
 	return (j);
 }
 
+/* Check if have specific char in str. */
 int	ft_charinstr(char *str, char c)
 {
 	int	i;
@@ -45,6 +46,8 @@ int	ft_charinstr(char *str, char c)
 	return (0);
 }
 
+/* - Verify str inserted with C ou F parameter;
+- Define floor and cealing color.*/
 int	ft_atoi_color(const char *str, t_cub *cub)
 {
 	int	verify;
@@ -73,6 +76,8 @@ int	ft_atoi_color(const char *str, t_cub *cub)
 	return (cub->sum);
 }
 
+/* - Verify str inserted with R parameter;
+- Define the cub3d resolution. */
 int	ft_atoi_resol(const char *str, t_cub *cub)
 {
 	int		sum;

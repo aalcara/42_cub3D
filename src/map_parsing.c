@@ -6,41 +6,11 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 16:41:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/26 13:13:10 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/02 20:14:58 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub3d.h"
-
-int	ft_copy_map(char *str, t_cub *cub)
-{
-	static int	i = 0;
-	int			j;
-
-	j = 0;
-	cub->map[i] = NULL;
-	cub->map[i] = malloc(sizeof(char) * cub->sizeline + 1);
-	if (!cub->map[i])
-		return (0);
-	while (str[j] != '\0')
-	{
-		if (ft_start(str[j], cub, i, j) == 1)
-			cub->map[i][j] = '0';
-		else if (str[j] == ' ')
-			cub->map[i][j] = '1';
-		else
-			cub->map[i][j] = str[j];
-		j++;
-	}
-	while (j <= (cub->sizeline - 1))
-	{
-		cub->map[i][j] = '1';
-		j++;
-	}
-	cub->map[i][j] = '\0';
-	i++;
-	return (0);
-}
 
 int	ft_is_map(char *str, t_cub *cub)
 {
@@ -90,6 +60,37 @@ void	ft_mapsize(char *str, t_cub *cub)
 	cub->sizeline = ssizeline;
 }
 
+int	ft_copy_map(char *str, t_cub *cub)
+{
+	static int	i = 0;
+	int			j;
+
+	j = 0;
+	cub->map[i] = NULL;
+	cub->map[i] = malloc(sizeof(char) * cub->sizeline + 1);
+	if (!cub->map[i])
+		return (0);
+	while (str[j] != '\0')
+	{
+		if (ft_start(str[j], cub, i, j) == 1)
+			cub->map[i][j] = '0';
+		else if (str[j] == ' ')
+			cub->map[i][j] = '1';
+		else
+			cub->map[i][j] = str[j];
+		j++;
+	}
+	while (j <= (cub->sizeline - 1))
+	{
+		cub->map[i][j] = '1';
+		j++;
+	}
+	cub->map[i][j] = '\0';
+	i++;
+	return (0);
+}
+
+/**/
 int	ft_parsing_map(char *filename, t_cub *cub)
 {
 	int		fd;

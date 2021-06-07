@@ -6,12 +6,13 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 10:57:01 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/26 13:27:07 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/02 15:48:53 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub3d.h"
 
+/* - verify if the --save argument is correct */
 int	ft_check_save(char *str)
 {
 	int	i;

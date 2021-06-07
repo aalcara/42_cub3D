@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 16:26:48 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/25 09:10:07 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/02 17:11:51 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	ft_emptyline(char *str)
 	return (0);
 }
 
+/*Verifry number of commas in a function. */
 int	ft_nb_comma(const char *str)
 {
 	int	i;
@@ -43,6 +44,7 @@ int	ft_nb_comma(const char *str)
 	return (j);
 }
 
+/*Check if paramerter has correct pattern (two commas).*/
 void	ft_atoi_color_check(const char *str, t_cub *cub)
 {
 	int	i;

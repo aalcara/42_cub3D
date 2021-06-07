@@ -6,12 +6,13 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 09:56:42 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/26 13:20:27 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/02 20:01:04 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub3d.h"
 
+/*Verify and alloc path of texture. */
 int	ft_path_texture(char *str, char **texture, t_cub *cub, int j)
 {
 	cub->count2 = 0;
@@ -26,7 +27,7 @@ int	ft_path_texture(char *str, char **texture, t_cub *cub, int j)
 	while (str[j] != '.')
 	{
 		if (str[j] != ' ' && str[j] != '.')
-			cub -> error = 2;
+			cub->error = 2;
 		j++;
 	}
 	*texture = (char *)(malloc(sizeof(char) * (ft_strlen2(str) + 1)));
@@ -42,6 +43,7 @@ int	ft_path_texture(char *str, char **texture, t_cub *cub, int j)
 	return (0);
 }
 
+/*Parse texture parameter and verify if it is a valid parameter.*/
 void	ft_texture(char *str, t_cub *cub)
 {
 	int			i;
@@ -65,16 +67,18 @@ void	ft_texture(char *str, t_cub *cub)
 	j++;
 }
 
+/* verify if map params still null and get resolution dimension and floor and
+cealing colors. */
 void	ft_color_resolution(char **str, t_cub *cub)
 {
 	int	i;
 
 	i = 0;
 	cub->i = 1;
-	if (cub->sizeline > 0 && (cub->no == NULL || cub->so == NULL ||\
-			cub->we == NULL || cub->ea == NULL ||cub->sp == NULL))
+	if (cub->sizeline > 0 && (cub->no == NULL || cub->so == NULL || \
+			cub->we == NULL || cub->ea == NULL || cub->sp == NULL))
 		cub->error = 2;
-	if ((cub->no != NULL || cub->so != NULL || cub->we != NULL ||\
+	if ((cub->no != NULL || cub->so != NULL || cub->we != NULL || \
 			cub->ea != NULL || cub->sp != NULL) && \
 			(cub->rx == 0 || cub->ry == 0))
 		cub->error = 2;
@@ -93,6 +97,10 @@ void	ft_color_resolution(char **str, t_cub *cub)
 		cub->c = ft_atoi_color(*str, cub);
 }
 
+/* - Open .cub file, virify if it's valid file;
+- Get parameters in functions color_resolution, texture and mapsize;
+- With correct params start parsing_map function.
+*/
 void	ft_parsing(char *filename, t_cub *cub)
 {
 	int		fd;
