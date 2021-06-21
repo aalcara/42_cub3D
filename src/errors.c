@@ -6,18 +6,21 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 19:09:10 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/26 11:16:37 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/16 09:20:55 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub3d.h"
 
+/*
+Verify errors from .cub file.
+*/
 void	ft_verify_errors(t_cub *cub)
 {
 	if (ft_walls(cub) == 1)
 		ft_error(cub, "Map not surrounded by 1\n");
 	if (cub->start == 'x')
-		ft_error(cub, "Not finded the player\n");
+		ft_error(cub, "Can't find the player\n");
 	if (cub->indic2 != 6)
 		ft_error(cub, "F or C has bad data\n");
 	if (cub->multiplayer == 1)

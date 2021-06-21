@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   save.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: anderson <anderson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 10:57:01 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/25 17:03:23 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/16 09:16:24 by anderson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub3d.h"
 
+/*
+write bmp file header
+*/
 void	ft_header(t_cub *cub, int fd)
 {
 	int	tmp;
@@ -40,6 +43,9 @@ void	ft_header(t_cub *cub, int fd)
 	write(fd, &tmp, 4);
 }
 
+/*
+Creat and write header of bmp file.
+*/
 void	ft_save(t_cub *cub)
 {
 	int	fd;

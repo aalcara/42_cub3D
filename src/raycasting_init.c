@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 19:07:15 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/26 13:08:34 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/17 15:49:11 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ void	ft_init_dir(t_cub *cub)
 		cub->ray.planx = -0.66;
 }
 
+/*
+init raycasting variables
+*/
 void	ft_init_mlx(t_cub *cub)
 {
 	cub->s.zbuffer = (double *)malloc(sizeof(double) * cub->rx);
@@ -70,7 +73,7 @@ void	ft_init_ray2(t_cub *cub)
 				/ (cub->ray.raydiry * cub->ray.raydiry));
 }
 
-void	ft_init_ray(t_cub *cub)
+void	ft_init_ray(t_cub *cub) 
 {
 	cub->ray.hit = 0;
 	cub->ray.perpwalldist = 0;

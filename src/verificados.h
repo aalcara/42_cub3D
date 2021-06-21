@@ -4,7 +4,6 @@
 **	errors
 ******************************************************************************/
 
-void	ft_verify_errors(t_cub *cub);
 void	ft_error2(t_cub *cub);
 void	ft_error(t_cub *cub, char *str);
 
@@ -15,42 +14,18 @@ void	ft_error(t_cub *cub, char *str);
 int		ft_exit(t_cub *cub);
 
 /******************************************************************************
-**	map_parsing
-******************************************************************************/
-
-int		ft_copy_map(char *str, t_cub *cub);
-int		ft_parsing_map(char *filename, t_cub *cub);
-
-/******************************************************************************
 **	map_utils
 ******************************************************************************/
 
 int		ft_walls_util(char *str);
 int		ft_walls(t_cub *cub);
-int		ft_start(char c, t_cub *cub, int i, int j);
-
-/******************************************************************************
-**	move_keys
-******************************************************************************/
-
-int		ft_key_press(int keycode, t_cub *cub);
-int		ft_key_release(int keycode, t_cub *cub);
 
 /******************************************************************************
 **	raycasting
 ******************************************************************************/
 
 int		ft_raycasting(t_cub *cub);
-int		ft_mlx(t_cub *cub);
 
-/******************************************************************************
-**	raycasting_init
-******************************************************************************/
-
-void	ft_init_dir(t_cub *cub);
-void	ft_init_mlx(t_cub *cub);
-void	ft_init_ray2(t_cub *cub);
-void	ft_init_ray(t_cub *cub);
 
 /******************************************************************************
 **	raycasting_move
@@ -65,50 +40,12 @@ void	ft_rotate_left(t_cub *cub, double olddirx);
 **	raycasting_utils
 ******************************************************************************/
 
-void	ft_drawstartend(t_cub *cub);
-void	ft_incrementray(t_cub *cub);
-void	ft_stepsidedist(t_cub *cub);
 void	ft_swap(t_cub *cub);
-
-/******************************************************************************
-**	save
-******************************************************************************/
-
-void	ft_header(t_cub *cub, int fd);
-void	ft_save(t_cub *cub);
-
-/******************************************************************************
-**	sprite
-******************************************************************************/
-
-void	ft_dist_order2(t_cub *cub);
-void	ft_dist_order(t_cub *cub);
-void	ft_draw_spr(t_cub *cub, int y, int texx, int stripe);
-void	ft_sprite(t_cub *cub);
-
-/******************************************************************************
-**	sprite_init
-******************************************************************************/
-
-void	ft_init_sprite(t_cub *cub);
-void	ft_init_sprite2(t_cub *cub, int i, int j, int v);
-
-/******************************************************************************
-**	texture
-******************************************************************************/
-void	ft_get_texture_adress(t_cub *cub);
-void	ft_get_texture(t_cub *cub);
 
 /******************************************************************************
 **	texture_draw
 ******************************************************************************/
 
-void	ft_draw_texture(t_cub *cub, int x, int y);
-int		ft_color_column(t_cub *cub);
-
-/******************************************************************************
-**	texture_init
-******************************************************************************/
-
-void	ft_init_texture(t_cub *cub);
+//**************void	ft_draw_texture(t_cub *cub, int x, int y);
+//*************int		ft_color_column(t_cub *cub);
 

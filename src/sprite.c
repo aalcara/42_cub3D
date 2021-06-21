@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 17:18:55 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/26 13:06:37 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/21 16:44:46 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,13 @@ void	ft_dist_order(t_cub *cub)
 	}
 }
 
+/*
+- transfor sprite with inverse camera matrix;
+- calculate transform x and y;
+- calculate height of the sprite;
+- highest and lowest pixel to fill;
+- calculate the width of sprite. 
+*/
 void	ft_calculs(t_cub *cub, int i)
 {
 	cub->s.spritex = cub->sxy[cub->s.order[i]].x - cub->ray.posx;

@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   map_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: anderson <anderson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 17:14:29 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/26 13:09:15 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/16 08:00:53 by anderson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub3d.h"
 
+/*
+Take start position of player.
+- If char c is some of correct start position return 1, else return 0.
+*/
 int	ft_start(char c, t_cub *cub, int i, int j)
 {
 	if (c == 'N' || c == 'S' || c == 'E' || c == 'W')

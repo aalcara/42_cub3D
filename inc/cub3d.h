@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 09:56:44 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/06/02 20:10:34 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/16 14:25:42 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,7 @@ int		ft_key_release(int keycode, t_cub *cub);
 ******************************************************************************/
 
 int		ft_raycasting(t_cub *cub);
+void	ft_get_resolution(t_cub *cub);
 int		ft_mlx(t_cub *cub);
 
 /******************************************************************************
@@ -174,8 +175,9 @@ void	ft_init_sprite(t_cub *cub);
 void	ft_init_sprite2(t_cub *cub, int i, int j, int v);
 
 /******************************************************************************
-**	texture
+**	get_texture
 ******************************************************************************/
+
 void	ft_get_texture_adress(t_cub *cub);
 void	ft_get_texture(t_cub *cub);
 

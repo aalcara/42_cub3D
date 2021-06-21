@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d_utils2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: anderson <anderson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 16:26:48 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/06/02 17:11:51 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/13 19:04:54 by anderson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub3d.h"
 
+/*- If str is a empty line, return 1
+- Else return 0*/
 int	ft_emptyline(char *str)
 {
 	int	i;

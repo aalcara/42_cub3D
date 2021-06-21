@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   map_parsing.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: anderson <anderson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 16:41:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/06/02 20:14:58 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/16 08:05:06 by anderson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub3d.h"
 
+/*
+Return 1 for an string with valids map characters
+*/
 int	ft_is_map(char *str, t_cub *cub)
 {
 	int	i;
@@ -39,6 +42,9 @@ int	ft_is_map(char *str, t_cub *cub)
 	return (0);
 }
 
+/*
+based on ft_is_map return, take cub.nblines and cub.sizeline
+*/
 void	ft_mapsize(char *str, t_cub *cub)
 {
 	int			i;
@@ -60,6 +66,9 @@ void	ft_mapsize(char *str, t_cub *cub)
 	cub->sizeline = ssizeline;
 }
 
+/*
+Copy str to cub.map array
+*/
 int	ft_copy_map(char *str, t_cub *cub)
 {
 	static int	i = 0;
@@ -90,7 +99,10 @@ int	ft_copy_map(char *str, t_cub *cub)
 	return (0);
 }
 
-/**/
+/*
+- Open .cub file again
+- While get_next_line return some value, call ft_copy_map
+*/
 int	ft_parsing_map(char *filename, t_cub *cub)
 {
 	int		fd;

@@ -6,12 +6,15 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 17:42:38 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/25 09:16:44 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/16 16:02:10 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub3d.h"
 
+/*
+Gets momory address of images
+*/
 void	ft_get_texture_adress(t_cub *cub)
 {
 	cub->texture[0].addr = (int *)mlx_get_data_addr(cub->texture[0].img,
@@ -31,27 +34,30 @@ void	ft_get_texture_adress(t_cub *cub)
 			&cub->texture[4].endian);
 }
 
+/*
+Reads texture mlx files to cub.texture.img variable
+*/
 void	ft_get_texture(t_cub *cub)
 {
 	cub->texture[0].img = mlx_xpm_file_to_image(cub->data.mlx_ptr, \
 				cub->no, &(cub->texture[0].width), &(cub->texture[0].height));
 	if (!cub->texture[0].img)
-		ft_error(cub, "Texture SO\n");
+		ft_error(cub, "Texture NO\n");
 	cub->texture[1].img = mlx_xpm_file_to_image(cub->data.mlx_ptr, \
 				cub->so, &(cub->texture[1].width), &(cub->texture[1].height));
 	if (!cub->texture[1].img)
-		ft_error(cub, "Texture NO\n");
+		ft_error(cub, "Texture SO\n");
 	cub->texture[2].img = mlx_xpm_file_to_image(cub->data.mlx_ptr, \
 				cub->we, &(cub->texture[2].width), &(cub->texture[2].height));
 	if (!cub->texture[2].img)
-		ft_error(cub, "Texture EA\n");
+		ft_error(cub, "Texture WE\n");
 	cub->texture[3].img = mlx_xpm_file_to_image(cub->data.mlx_ptr, \
 				cub->ea, &(cub->texture[3].width), &(cub->texture[3].height));
 	if (!cub->texture[3].img)
-		ft_error(cub, "Texture WE\n");
+		ft_error(cub, "Texture EA\n");
 	cub->texture[4].img = mlx_xpm_file_to_image(cub->data.mlx_ptr, \
 				cub->sp, &(cub->texture[4].width), &(cub->texture[4].height));
 	if (!cub->texture[4].img)
-		ft_error(cub, "Texture S\n");
+		ft_error(cub, "Texture Sprite\n");
 	ft_get_texture_adress(cub);
 }

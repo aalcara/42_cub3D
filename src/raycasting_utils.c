@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 21:49:26 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/26 10:24:22 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/17 16:33:14 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	ft_incrementray(t_cub *cub)
 	ft_drawstartend(cub);
 }
 
-void	ft_stepsidedist(t_cub *cub)
+void	ft_stepsidedist(t_cub *cub) 
 {
 	if (cub->ray.raydirx < 0)
 	{

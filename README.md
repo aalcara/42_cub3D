@@ -15,7 +15,12 @@ This repository is used for educational purposes. It has study references, tests
 * [Automatic variables ($< and $@)](http://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html#Automatic-Variables);
 * [Pattern rules (about % simbol)](http://www.gnu.org/software/make/manual/html_node/Pattern-Match.html#Pattern-Match);
 
+### Save Bitmap file
+* [C++: How to Write a Bitmap Image from Scratch](https://dev.to/muiz6/c-how-to-write-a-bitmap-image-from-scratch-1k6m);
+* [Bits to Bitmaps: A simple walkthrough of BMP Image Format](https://medium.com/sysf/bits-to-bitmaps-a-simple-walkthrough-of-bmp-image-format-765dc6857393)
 
+### Raycasting
+*[Lode's Computer Graphics Tutorial - Raycasting ](https://lodev.org/cgtutor/raycasting.html)
 
 
 in progress...

@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 09:56:42 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/06/02 20:01:04 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/16 14:28:47 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,13 @@ void	ft_texture(char *str, t_cub *cub)
 
 	i = 0;
 	if (str[i] == 'S' && str[i + 1] == 'O')
-		ft_path_texture(str, &cub->no, cub, 2);
-	else if (str[i] == 'N' && str[i + 1] == 'O')
 		ft_path_texture(str, &cub->so, cub, 2);
+	else if (str[i] == 'N' && str[i + 1] == 'O')
+		ft_path_texture(str, &cub->no, cub, 2);
 	else if (str[i] == 'E' && str[i + 1] == 'A')
-		ft_path_texture(str, &cub->we, cub, 2);
-	else if (str[i] == 'W' && str[i + 1] == 'E')
 		ft_path_texture(str, &cub->ea, cub, 2);
+	else if (str[i] == 'W' && str[i + 1] == 'E')
+		ft_path_texture(str, &cub->we, cub, 2);
 	else if (str[i] == 'S' && str[i + 1] != 'O')
 		ft_path_texture(str, &cub->sp, cub, 1);
 	else if (str[0] != 'N' && str[0] != 'S' && str[0] != 'W' && str[0] != 'E'\

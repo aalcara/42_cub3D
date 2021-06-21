@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   sprite_init.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: anderson <anderson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 17:42:38 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/26 13:03:41 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/16 09:17:31 by anderson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub3d.h"
 
+/*
+- Call ft_verify_errors;
+- alocate memory for sprites data (cub.sxy, cub,s.order, cub.s.dist).
+*/
 void	ft_init_sprite(t_cub *cub)
 {
 	int	i;
@@ -42,6 +46,9 @@ void	ft_init_sprite(t_cub *cub)
 	ft_mlx(cub);
 }
 
+/*
+Set the position of sprites.
+*/
 void	ft_init_sprite2(t_cub *cub, int i, int j, int v)
 {
 	i = i - 1;
