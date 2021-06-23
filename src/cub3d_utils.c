@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 11:06:16 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/06/02 19:34:00 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/23 16:10:29 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,7 @@ int	ft_atoi_color(const char *str, t_cub *cub)
 	if (str[1] != ' ')
 		cub->error = 2;
 	ft_atoi_color_check(str, cub);
-	while (str[cub->i] == ' ' || str[cub->i] == '\t' || str[cub->i] == ',' || \
-			str[cub->i] == '\n' || str[cub->i] == '\r' || str[cub->i] == '\v' \
-			|| str[cub->i] == '\f')
+	while (str[cub->i] == ' ' || str[cub->i] == ',')
 	{
 		cub->i++;
 		verify = 0;
@@ -67,11 +65,11 @@ int	ft_atoi_color(const char *str, t_cub *cub)
 		while (str[cub->i] >= '0' && str[cub->i] <= '9')
 		{
 			verify = (verify * 10) + str[cub->i] - 48;
-			cub->sum = (cub->sum * 10) + (str[cub->i] - 48);
 			cub->i++;
 		}
 		if (verify > 255 || verify < 0)
 			cub->error = 2;
+		ft_color_calc(verify, cub);
 	}
 	return (cub->sum);
 }

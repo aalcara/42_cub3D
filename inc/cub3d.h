@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 09:56:44 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/06/23 10:46:20 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/23 16:09:03 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ int		ft_emptyline(char *str);
 int		ft_nb_comma(const char *str);
 void	ft_atoi_color_check(const char *str, t_cub *cub);
 void	ft_check_directory(char *filename, int fd, t_cub *cub);
+void	ft_color_calc(int verify, t_cub *cub);
 
 /******************************************************************************
 **	errors

@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 16:26:48 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/06/23 10:47:54 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/23 16:12:04 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,14 @@ void	ft_check_directory(char *filename, int fd, t_cub *cub)
 	fd = open(filename, O_DIRECTORY);
 	if (fd != -1)
 		ft_error(cub, "filename is a directory\n");
+}
+
+void	ft_color_calc(int verify, t_cub *cub)
+{
+	if (cub->indic2 == 1 || cub->indic2 == 4)
+		cub->sum = cub->sum + verify * 256 * 256;
+	else if (cub->indic2 == 2 || cub->indic2 == 5)
+		cub->sum = cub->sum + verify * 256;
+	else if (cub->indic2 == 3 || cub->indic2 == 6)
+		cub->sum = cub->sum + verify;
 }

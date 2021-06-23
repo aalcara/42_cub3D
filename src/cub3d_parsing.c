@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 09:56:42 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/06/23 10:47:00 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/23 16:12:17 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,10 @@ void	ft_color_resolution(char **str, t_cub *cub)
 		cub->f = ft_atoi_color(*str, cub);
 	else if (*str[i] == 'C')
 		cub->c = ft_atoi_color(*str, cub);
+	cub->sum = 0;
 }
 
-/* - Open .cub file, virify if it's valid file;
+/* - Open .cub file, verify if it's valid file;
 - Get parameters in functions color_resolution, texture and mapsize;
 - With correct params start parsing_map function.
 */
