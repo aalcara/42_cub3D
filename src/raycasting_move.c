@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 19:25:08 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/06/21 16:55:31 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/22 20:09:33 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,25 @@ void	ft_left_right(t_cub *cub)
 	}
 }
 
+void	ft_rotate_left(t_cub *cub, double olddirx)
+{
+	double	oldplanex;
+
+	if (cub->data.rotate_left == 1)
+	{
+		olddirx = cub->ray.dirx;
+		oldplanex = cub->ray.planx;
+		cub->ray.dirx = cub->ray.dirx * cos(cub->ray.rotspeed / 2) - \
+			cub->ray.diry * sin(cub->ray.rotspeed / 2);
+		cub->ray.diry = olddirx * sin(cub->ray.rotspeed / 2) + \
+			cub->ray.diry * cos(cub->ray.rotspeed / 2);
+		cub->ray.planx = cub->ray.planx * cos(cub->ray.rotspeed / 2) - \
+			cub->ray.plany * sin(cub->ray.rotspeed / 2);
+		cub->ray.plany = oldplanex * sin(cub->ray.rotspeed / 2) + \
+			cub->ray.plany * cos(cub->ray.rotspeed / 2);
+	}
+}
+
 void	ft_rotate_right_left(t_cub *cub)
 {
 	double	oldplanx;
@@ -75,23 +94,4 @@ void	ft_rotate_right_left(t_cub *cub)
 			cub->ray.plany * cos(-cub->ray.rotspeed / 2);
 	}
 	ft_rotate_left(cub, olddirx);
-}
-
-void	ft_rotate_left(t_cub *cub, double olddirx)
-{
-	double	oldplanex;
-
-	if (cub->data.rotate_left == 1)
-	{
-		olddirx = cub->ray.dirx;
-		oldplanex = cub->ray.planx;
-		cub->ray.dirx = cub->ray.dirx * cos(cub->ray.rotspeed / 2) - \
-			cub->ray.diry * sin(cub->ray.rotspeed / 2);
-		cub->ray.diry = olddirx * sin(cub->ray.rotspeed / 2) + \
-			cub->ray.diry * cos(cub->ray.rotspeed / 2);
-		cub->ray.planx = cub->ray.planx * cos(cub->ray.rotspeed / 2) - \
-			cub->ray.plany * sin(cub->ray.rotspeed / 2);
-		cub->ray.plany = oldplanex * sin(cub->ray.rotspeed / 2) + \
-			cub->ray.plany * cos(cub->ray.rotspeed / 2);
-	}
 }

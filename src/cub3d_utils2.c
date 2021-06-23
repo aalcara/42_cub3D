@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d_utils2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anderson <anderson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 16:26:48 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/06/13 19:04:54 by anderson         ###   ########.fr       */
+/*   Updated: 2021/06/23 10:47:54 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,11 @@ void	ft_atoi_color_check(const char *str, t_cub *cub)
 		cub->error = 2;
 	if (ft_nb_comma(str) != 2)
 		cub->error = 2;
+}
+
+void	ft_check_directory(char *filename, int fd, t_cub *cub)
+{
+	fd = open(filename, O_DIRECTORY);
+	if (fd != -1)
+		ft_error(cub, "filename is a directory\n");
 }

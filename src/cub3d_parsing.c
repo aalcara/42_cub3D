@@ -6,11 +6,25 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 09:56:42 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/06/16 14:28:47 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/23 10:47:00 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub3d.h"
+
+int	ft_check_texture_path(char *str, t_cub *cub, int j)
+{
+	if (ft_charinstr(str, '.') == 0 || ft_charinstr(str, '/') == 0 || \
+			ft_strlen2(str) <= 2)
+		cub->error = 2;
+	while (str[j] != '.')
+	{
+		if (str[j] != ' ' && str[j] != '.')
+			cub->error = 2;
+		j++;
+	}
+	return (j);
+}
 
 /*Verify and alloc path of texture. */
 int	ft_path_texture(char *str, char **texture, t_cub *cub, int j)
@@ -21,15 +35,7 @@ int	ft_path_texture(char *str, char **texture, t_cub *cub, int j)
 		cub->error = 2;
 		return (0);
 	}
-	if (ft_charinstr(str, '.') == 0 || ft_charinstr(str, '/') == 0 || \
-			ft_strlen2(str) <= 2)
-		cub->error = 2;
-	while (str[j] != '.')
-	{
-		if (str[j] != ' ' && str[j] != '.')
-			cub->error = 2;
-		j++;
-	}
+	j = ft_check_texture_path(str, cub, j);
 	*texture = (char *)(malloc(sizeof(char) * (ft_strlen2(str) + 1)));
 	if (!(*texture))
 		cub->error = 2;
@@ -101,17 +107,14 @@ void	ft_color_resolution(char **str, t_cub *cub)
 - Get parameters in functions color_resolution, texture and mapsize;
 - With correct params start parsing_map function.
 */
-void	ft_parsing(char *filename, t_cub *cub)
+void	ft_parsing(char *filename, t_cub *cub, int fd)
 {
-	int		fd;
 	int		ret;
 	char	*str;
 
 	ret = 1;
 	str = NULL;
-	fd = open(filename, O_DIRECTORY);
-	if (fd != -1)
-		ft_error(cub, "filename is a directory\n");
+	ft_check_directory(filename, fd, cub);
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		ft_error(cub, "invalid .cub file\n");

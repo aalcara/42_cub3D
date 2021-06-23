@@ -2,7 +2,7 @@ R 1000 600
 C 0, 0, 0
 
 NO ./textures/eagle.xpm
-SO ./textures/greystone.xpm
+SO ./textures/wood.xpm
 EA ./textures/mossy.xpm
 WE ./textures/brickstone.xpm
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sprite_init.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anderson <anderson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 17:42:38 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/06/16 09:17:31 by anderson         ###   ########.fr       */
+/*   Updated: 2021/06/23 14:10:30 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,6 @@ void	ft_init_sprite(t_cub *cub)
 	cub->s.order = (int *)malloc(sizeof(int) * cub->s.nbspr);
 	if (!cub->s.order)
 		ft_error(cub, "Malloc s.order*");
-	cub->s.dist = (double *)malloc(sizeof(double) * cub->s.nbspr);
-	if (!cub->s.dist)
-		ft_error(cub, "Malloc s.dist*");
 	ft_init_sprite2(cub, 0, 0, 0);
 	ft_mlx(cub);
 }
@@ -51,6 +48,9 @@ Set the position of sprites.
 */
 void	ft_init_sprite2(t_cub *cub, int i, int j, int v)
 {
+	cub->s.dist = (double *)malloc(sizeof(double) * cub->s.nbspr);
+	if (!cub->s.dist)
+		ft_error(cub, "Malloc s.dist*");
 	i = i - 1;
 	while (++i < cub->nblines)
 	{

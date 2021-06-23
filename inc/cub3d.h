@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 09:56:44 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/06/16 14:25:42 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/23 10:46:20 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,11 @@ void	ft_init_geral(t_cub *cub);
 **	cub3d_parsing
 ******************************************************************************/
 
+int		ft_check_texture_path(char *str, t_cub *cub, int j);
 int		ft_path_texture(char *str, char **texture, t_cub *cub, int j);
 void	ft_texture(char *str, t_cub *cub);
 void	ft_color_resolution(char **str, t_cub *cub);
-void	ft_parsing(char *filename, t_cub *cub);
+void	ft_parsing(char *filename, t_cub *cub, int fd);
 
 /******************************************************************************
 **	cub3d_utils
@@ -71,6 +72,7 @@ int		ft_atoi_resol(const char *str, t_cub *cub);
 int		ft_emptyline(char *str);
 int		ft_nb_comma(const char *str);
 void	ft_atoi_color_check(const char *str, t_cub *cub);
+void	ft_check_directory(char *filename, int fd, t_cub *cub);
 
 /******************************************************************************
 **	errors

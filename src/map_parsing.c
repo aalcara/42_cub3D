@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_parsing.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anderson <anderson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 16:41:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/06/16 08:05:06 by anderson         ###   ########.fr       */
+/*   Updated: 2021/06/23 14:30:56 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ int	ft_copy_map(char *str, t_cub *cub)
 	int			j;
 
 	j = 0;
-	cub->map[i] = NULL;
 	cub->map[i] = malloc(sizeof(char) * cub->sizeline + 1);
 	if (!cub->map[i])
 		return (0);
@@ -110,7 +109,6 @@ int	ft_parsing_map(char *filename, t_cub *cub)
 	char	*str;
 
 	ret = 1;
-	str = NULL;
 	fd = open(filename, O_RDONLY);
 	cub->map = malloc(sizeof(char *) * cub->nblines);
 	if (!cub->map)
@@ -123,10 +121,9 @@ int	ft_parsing_map(char *filename, t_cub *cub)
 			cub->emptyline = 1;
 		cub->insidemap = ft_is_map(str, cub);
 		if (cub->insidemap == 1)
-		{
 			cub->count++;
+		if (cub->insidemap == 1)
 			ft_copy_map(str, cub);
-		}
 		free(str);
 	}
 	close(fd);

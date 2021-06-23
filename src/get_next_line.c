@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 23:30:56 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/05/26 13:28:50 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/22 20:08:03 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,17 +43,13 @@ int	ft_copy(char **line, char **buff)
 		*buff = ft_subbuff(*buff, start + 1, (ft_strlen(*buff) - start));
 		return (0);
 	}
-	else
-	{
-		temp = NULL;
-		if (*line)
-			temp = *line;
-		*line = ft_strjoin(*line, *buff);
-		if (temp)
-			free(temp);
-		return (1);
-	}
-	return (-1);
+	temp = NULL;
+	if (*line)
+		temp = *line;
+	*line = ft_strjoin(*line, *buff);
+	if (temp)
+		free(temp);
+	return (1);
 }
 
 int	ft_eof(int ret, char **buff, char **line)
@@ -96,18 +92,14 @@ int	get_next_line(int fd, char **line, t_cub *cub)
 	if (ret == 0)
 		return (1);
 	if (!buff)
-	{
 		buff = malloc(sizeof(char) * BUFFER_SIZE + 1);
-		if (!buff)
-			return (-1);
-	}
+	if (!buff)
+		return (-1);
 	ret = read(fd, buff, BUFFER_SIZE);
-	while (ret > 0)
-	{
+	if (ret > 0)
 		buff[ret] = '\0';
-		if (!ft_copy(line, &buff))
-			return (1);
-	}
+	if (!ft_copy(line, &buff))
+		return (1);
 	if (ret <= 0)
 		return (ft_eof(ret, &buff, line));
 	return (1);

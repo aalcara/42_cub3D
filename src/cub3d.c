@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 09:56:42 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/06/02 15:47:28 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/06/23 10:48:08 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@
 int	ft_cub(char *str, t_cub *cub)
 {
 	int	i;
+	int	fd;
 
 	i = 0;
+	fd = 0;
 	while (str[i] != '\0')
 		i++;
 	while (str[i] != '.')
@@ -31,7 +33,7 @@ int	ft_cub(char *str, t_cub *cub)
 		}
 	}
 	if (str[i + 1] == 'c' && str[i + 2] == 'u' && str[i + 3] == 'b')
-		ft_parsing(str, cub);
+		ft_parsing(str, cub, fd);
 	else
 		ft_error(cub, "Invalid map name\n");
 	return (0);
