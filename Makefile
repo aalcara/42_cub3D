@@ -6,7 +6,7 @@
 #    By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/18 10:10:33 by aalcara-          #+#    #+#              #
-#    Updated: 2021/06/16 15:54:09 by aalcara-         ###   ########.fr        #
+#    Updated: 2021/06/23 16:33:47 by aalcara-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ OBJ_DIR = obj
 SRC_DIR = src
 INC_DIR = inc
 
-# declarando OBJ com nomes iguais aos arquivos SRC, com extensão .o ou no lugar de .c
+# declaring OBJ with the same name of SRC files, with .o extention in place of .c
 OBJ = $(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
 
 all: $(NAME)
@@ -56,16 +56,15 @@ $(NAME): $(OBJ)
 		@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -L $(MLX_DIR) $(MLXFLAGS)
 		@echo $(NAME) : Created!
 
-# simbolo % substitui qualquer nome com no mínimo 1 caracter;
-# neste caso que termine em .o e em .c
-# $< significa o primeiro pré requisito, neste caso :$(SRC_DIR)/%.c
-# $@ significa o próprio nome da regra, neste caso $(OBJ_DIR)/%.o
+#% symbol replace every name that has at least one character
+# in this case the ends with .o or .c;
+# $< referes to the first prerequisite, in this case :$(SRC_DIR)/%.c;
+# $@ refers to the self namo of rule, in this case $(OBJ_DIR)/%.o.
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 		@mkdir -p $(OBJ_DIR)
 		@$(CC) $(CFLAGS) -I $(INC_DIR) -I $(MLX_DIR) -c $< -o $@
 
-# -C flag muda para MLX_DIR para rodar outro make
-# --no-print-directory
+# -C flag chages to MLX_DIR to start a new make;
 $(MLX):
 	@echo ------------------
 	@echo making minilibx
