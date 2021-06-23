@@ -6,7 +6,7 @@
 #    By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/18 10:10:33 by aalcara-          #+#    #+#              #
-#    Updated: 2021/06/23 16:33:47 by aalcara-         ###   ########.fr        #
+#    Updated: 2021/06/23 16:43:39 by aalcara-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ SRC =	cub3d_init.c \
 		texture_get.c \
 		texture_init.c
 
-NAME = Cub3D
+NAME = cub3D
 
 MLX_DIR = lib/minilibx-linux
 MLX = libmlx.a
